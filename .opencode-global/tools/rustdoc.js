@@ -1,5 +1,5 @@
 import { tool } from "@opencode-ai/plugin"
-import { runRustDoc, type RustDocArgs } from "../../src/rustdoc.js"
+import { runRustDoc } from "../rustdoc-tool/dist/rustdoc.js"
 
 export default tool({
   description:
@@ -43,7 +43,7 @@ export default tool({
   },
   async execute(args, context) {
     const cwd = context.worktree || context.directory || process.cwd()
-    const rustdocArgs: RustDocArgs = { action: args.action }
+    const rustdocArgs = { action: args.action }
     if (args.query !== undefined) rustdocArgs.query = args.query
     if (args.crate !== undefined) rustdocArgs.crate = args.crate
     if (args.version !== undefined) rustdocArgs.version = args.version

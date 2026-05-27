@@ -1,8 +1,6 @@
 ---
 name: rust-docs
-description: Use the project rustdoc tool to answer Rust API, crate documentation, and Rust version or edition migration questions with fetched source-backed information.
-allowed-tools:
-  - rustdoc
+description: Use the rustdoc tool to answer Rust API, crate documentation, and Rust version or edition migration questions with fetched source-backed information.
 ---
 
 # Rust Docs Lookup

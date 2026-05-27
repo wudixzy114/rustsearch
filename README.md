@@ -4,8 +4,8 @@ This project adds a Rust documentation lookup path for OpenCode models that do n
 
 It provides:
 
-- `.opencode/tools/rustdoc.ts`: an OpenCode custom tool backed by host-network fetches and local cache.
-- `.opencode/skills/rust-docs/SKILL.md`: instructions that tell the agent when and how to call the tool.
+- `.opencode-global/tools/rustdoc.js`: the global OpenCode custom tool wrapper.
+- `.opencode-global/skills/rust-docs/SKILL.md`: instructions that tell the agent when and how to call the tool.
 - `src/`: a TypeScript library and CLI for the same lookup behavior outside OpenCode.
 
 ## Install
@@ -14,7 +14,7 @@ It provides:
 npm install
 ```
 
-OpenCode discovers project-local custom tools from `.opencode/tools/` and skills from `.opencode/skills/`.
+OpenCode discovers global custom tools from `~/.config/opencode/tools/` and global skills from `~/.config/opencode/skills/`.
 
 ## CLI
 
